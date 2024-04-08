@@ -1,0 +1,12 @@
+.genplan-item {
+    fill: #05ffff;
+    fill-opacity: 0;
+    stroke: #05ffff;
+    stroke-width: 4px;
+    stroke-opacity: 0;
+
+    &:hover {
+        fill-opacity: 0.3;
+        stroke-opacity: 1;
+    }
+}
