@@ -1,0 +1,62 @@
+.flat {
+    &-path {
+        fill: #00000000;
+        stroke-width: 4px;
+    }
+
+    &:hover {
+        .flat-path {
+            stroke: #80D34E;
+            fill: #80D34E4a;
+        }
+    }
+
+    &.active {
+        .flat-path {
+            stroke: #05FF00;
+            fill: #05FF004a;
+        }
+    }
+
+    &-status-path {
+        fill: #fff;
+        stroke: #000;
+        stroke-width: 2px;
+    }
+
+    &-status-cell__path {
+        fill: #80D34E;
+        stroke: #000;
+        stroke-width: 2px;
+    }
+
+    &-status-cell__text {
+        fill:#000;
+        font-size: 16px; 
+        font-weight: 600; 
+    }
+}
+
+.floor-options {
+    @extend .container;
+    display: flex;
+    gap: 24px;
+    justify-content: space-between;
+    border: 2px solid;
+    border-radius: 8px;
+    margin: 12px auto;
+    padding: 24px;
+    background: $primary-accent-color;
+    color: #fff;
+
+    &-item {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        padding: 8px;
+        background: $background-accent;
+        border-radius: 6px;
+    }
+}
