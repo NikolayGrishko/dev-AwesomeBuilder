@@ -18,6 +18,24 @@
         }
     }
 
+    &.action {
+        .flat-status-cell__path {
+            fill: #80D34E;
+        }
+    }
+
+    &.booking {
+        .flat-status-cell__path {
+            fill: #6B68FF;
+        }
+    }
+
+    &.already-sold {
+        .flat-status-cell__path {
+            fill: #D34E4E;
+        }
+    }
+
     &-status-path {
         fill: #fff;
         stroke: #000;
@@ -25,7 +43,7 @@
     }
 
     &-status-cell__path {
-        fill: #80D34E;
+        fill: #00DEFC;
         stroke: #000;
         stroke-width: 2px;
     }

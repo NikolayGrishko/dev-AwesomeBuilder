@@ -8,7 +8,7 @@ const flatArray = [
         square: "82.3",
         price: "1100$",
         totalPrice: "90530$",
-        flatStatus: "sold",
+        flatStatus: "free",
     },
     {
         id: 1,
@@ -19,7 +19,7 @@ const flatArray = [
         square: "60.7",
         price: "1100$",
         totalPrice: "66770$",
-        flatStatus: "booked",
+        flatStatus: "sold",
     },
     {
         id: 2,
@@ -30,7 +30,7 @@ const flatArray = [
         square: "60.7",
         price: "1100$",
         totalPrice: "66770$",
-        flatStatus: "sold",
+        flatStatus: "action",
     },
     {
         id: 3,
@@ -41,7 +41,7 @@ const flatArray = [
         square: "82.0",
         price: "1100$",
         totalPrice: "90200$",
-        flatStatus: "free",
+        flatStatus: "booking",
     },
     {
         id: 4,
@@ -52,7 +52,7 @@ const flatArray = [
         square: "79.7",
         price: "1100$",
         totalPrice: "90200$",
-        flatStatus: "free",
+        flatStatus: "action",
     },
     {
         id: 5,
@@ -63,7 +63,7 @@ const flatArray = [
         square: "39.2",
         price: "1100$",
         totalPrice: "43120$",
-        flatStatus: 'action',
+        flatStatus: 'sold',
     },
     {
         id: 6,
@@ -74,7 +74,7 @@ const flatArray = [
         square: "42.0",
         price: "1100$",
         totalPrice: "46200$",
-        flatStatus: "sold",
+        flatStatus: "booking",
     },
     {
         id: 7,
@@ -85,7 +85,7 @@ const flatArray = [
         square: "39.2",
         price: "1100$",
         totalPrice: "43120$",
-        flatStatus: "free",
+        flatStatus: "booking",
     },
     {
         id: 8,
@@ -96,8 +96,8 @@ const flatArray = [
         square: "79.3",
         price: "1100$",
         totalPrice: "87230$",
-        flatStatus: "sold",
-    }
+        flatStatus: "free",
+    },
 ]
 
 
@@ -119,6 +119,7 @@ const installFloor = () =>{
         price: "1100$",
         totalPrice: "90530$",
         flatStatus: "sold",
+        
     }]
 
     const renderInformation = (array) => {
@@ -172,7 +173,19 @@ const installFloor = () =>{
 			let flatNumber = flatArray.filter(item =>  item.flatNumber ===  Number(thisFlat) )
 
 			renderInformation(flatNumber)
+
 		})
+
+        if (flat.classList.contains('booking')){
+            flat.querySelector('.flat-status-cell__tspan').innerHTML="Бронь"
+        } else if (flat.classList.contains('already-sold')){
+            flat.querySelector('.flat-status-cell__tspan').innerHTML="Продано"
+        } else if (flat.classList.contains('action')){
+            flat.querySelector('.flat-status-cell__tspan').innerHTML="Акция"
+        } else {
+            flat.querySelector('.flat-status-cell__tspan').innerHTML="Свободна"
+        }
+
     })
 }
 
