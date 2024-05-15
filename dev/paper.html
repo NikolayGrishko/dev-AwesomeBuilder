@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="theme-color" content="#188de7">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+    <title>AwesomeBuilder</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/papercss@1.9.2/dist/paper.min.css" />
+</head>
+<body>
+@@include('templates/header.html')
+<main class="wrapper home">
+    <div class="container-sm">
+        <div class="row margin-large">
+            <div class="row col-4 flex-spaces child-borders">
+                <label class="paper-btn margin" for="modal-1">Open Modal!</label>
+            </div>
+            <input class="modal-state" id="modal-1" type="checkbox">
+            <div class="modal">
+              <label class="modal-bg" for="modal-1"></label>
+              <div class="modal-body">
+                <label class="btn-close" for="modal-1">X</label>
+                <h4 class="modal-title">Modal Title</h4>
+                <h5 class="modal-subtitle">Modal Subtitle</h5>
+                <p class="modal-text">This is an example of modal which is implemented with pure CSS! :D</p>
+                <label for="modal-1">Nice!</label>
+              </div>
+            </div>
+        </div>
+        <div class="row flex-center">
+            <div class="card" style="width: 20rem;">
+                <div class="card-header">Header</div>
+                  <div class="card-body">
+                    <h4 class="card-title">My awesome Paper card!</h4>
+                    <h5 class="card-subtitle">Nice looking subtitle.</h5>
+                    <p class="card-text">You can also place image on the bottom of the card.</p>
+                    <button>Let me go here!</button>
+                  </div>
+                <div class="card-footer">Footer</div>
+            </div>
+        </div>
+        <div class="row margin-large flex-spaces">
+            <div class="collapsible">
+              <input id="collapsible5" type="radio" name="collapsible">
+              <label for="collapsible5">First</label>
+              <div class="collapsible-body">
+                <span>Bacon ipsum dolor sit amet landjaeger sausage brisket, jerky drumstick fatback boudin ball tip turducken...</span>
+              </div>
+            </div>
+            <div class="collapsible">
+              <input id="collapsible6" type="radio" name="collapsible">
+              <label for="collapsible6">Second</label>
+              <div class="collapsible-body">
+                <span>Bacon ipsum dolor sit amet beef venison beef ribs kielbasa. Sausage pig leberkas, t-bone sirloin shoulder bresaola...</span>
+              </div>
+            </div>
+            <div class="collapsible">
+              <input id="collapsible7" type="radio" name="collapsible">
+              <label for="collapsible7">Third</label>
+              <div class="collapsible-body">
+                <span>Bacon ipsum dolor sit amet landjaeger sausage brisket, jerky drumstick fatback boudin ball tip turducken...</span>
+              </div>
+            </div>
+            <div class="collapsible">
+              <input id="collapsible8" type="radio" name="collapsible">
+              <label for="collapsible8">Fourth</label>
+              <div class="collapsible-body">
+                <span>Bacon ipsum dolor sit amet beef venison beef ribs kielbasa. Sausage pig leberkas, t-bone sirloin shoulder bresaola...</span>
+              </div>
+            </div>
+        </div>
+        <div class="row margin-large flex-center">
+            <input type="button" class="paper-btn btn-primary-outline" value="Primary"/>
+            <input type="button" class="btn-secondary-outline" value="Secondary"/>
+            <button class="btn-success-outline">Success</button>
+            <button class="btn-warning-outline">Warning</button>
+            <a href="#" class="paper-btn btn-danger-outline">Danger</a>
+        </div>
+        <div class="row">
+            <div class="row flex-spaces tabs">
+                <input id="tab1" type="radio" name="tabs" checked>
+                <label for="tab1">Tab 1</label>
+              
+                <input id="tab2" type="radio" name="tabs">
+                <label for="tab2">Tab 2</label>
+              
+                <input id="tab3" type="radio" name="tabs">
+                <label for="tab3">Tab 3</label>
+              
+                <input id="tab4" type="radio" name="tabs">
+                <label for="tab4">Tab 4</label>
+              
+                <div class="content" id="content1">
+                  <p>
+                    Bacon ipsum dolor sit amet beef venison beef ribs kielbasa...
+                  </p>
+                  <p>
+                    Brisket meatball turkey short loin boudin leberkas meatloaf...
+                  </p>
+                </div>
+                <div class="content" id="content2">
+                  <p>
+                    Bacon ipsum dolor sit amet landjaeger sausage brisket...
+                  </p>
+                </div>
+                <div class="content" id="content3">
+                  <p>
+                    Bacon ipsum dolor sit amet beef venison beef ribs kielbasa...
+                  </p>
+                  <p>
+                    Brisket meatball turkey short loin boudin leberkas meatloaf...
+                  </p>
+                </div>
+                <div class="content" id="content4">
+                  <p>
+                    Bacon ipsum dolor sit amet landjaeger sausage brisket...
+                  </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+@@include('templates/footer.html')
